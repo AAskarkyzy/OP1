@@ -1,3 +1,33 @@
+
+Výsledek Shapiro-Wilkova testu normality
+
+ Interpretace výsledků:
+
+Statistika W = 0.98338 → hodnota blízká 1 znamená, že data jsou podobná normálnímu rozložení.
+p-hodnota = 0.3611 → protože p > 0.05, neodmítáme nulovou hypotézu, což znamená, že data mohou být normálně rozložena.
+🔹 Závěr:
+Test neprokázal významnou odchylku od normálního rozložení. To znamená, že proměnná PSATM může být považována za normálně rozloženou. ✅
+
+
+----------------------------------
+Interpretace grafů pro proměnnou Math$PSATM
+📊 Histogram
+
+Data mají zhruba symetrický tvar, což naznačuje možné normální rozložení.
+Mírná asymetrie a několik hodnot v krajních částech, ale žádné výrazné extrémy nebo outliery.
+Celkově tvar odpovídá normálnímu rozložení.
+📈 Q-Q graf (kvantil-kvantilový graf)
+
+Body leží blízko červené čáry, což znamená, že empirické kvantily odpovídají teoretickým kvantilům normálního rozložení.
+Mírné odchylky v ocasních částech (nižší a vyšší hodnoty), ale nejsou extrémní.
+Tvar odpovídá přibližně normálnímu rozložení.
+📌 Závěr:
+✅ Histogram i Q-Q graf potvrzují výsledek Shapiro-Wilkova testu (p = 0.3611) – data mohou být normálně rozložena. 🚀
+
+
+
+ТУТ НИЖЕ ПРОСТО ПЕРЕВОД!
+
 Быстрое объяснение результатов графика:
 1️⃣ Гистограмма
 
@@ -11,3 +41,22 @@
 📌 Вывод:
 ✅ Гистограмма и Q-Q график подтверждают результаты теста Shapiro-Wilk (p-value = 0.3611).
 ✅ Переменная PSATM можно считать нормально распределённой. 🚀
+
+-----------------------------------------
+Další testy pro ověření normality
+Pokud chceš hlubší analýzu, můžeš provést následující doplňkové testy:
+
+1️⃣ Šikmost a špičatost (skewness & kurtosis)
+
+Šikmost (skewness) měří symetrii rozložení:
+ Hodnota blízká 0 znamená symetrické rozložení (normální).
+
+Špičatost (kurtosis) měří, jak „špičaté“ nebo „plošné“ je rozložení:
+ Hodnota ≈ 3 odpovídá normálnímu rozložení.
+
+2️⃣ Kolmogorov-Smirnovův test (KS test)
+
+Testuje shodu s normálním rozložením:
+
+p-hodnota > 0.05 → neodmítáme nulovou hypotézu, tedy data mohou být normálně rozložena.
+

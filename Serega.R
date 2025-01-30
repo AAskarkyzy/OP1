@@ -22,3 +22,44 @@ cbind("n(i)"=abs,"N(i)"=kum_abs,"p(i)"=rc,"P(i)"=kum_relat)
 barplot(cumsum(table(Math$Course)), col = "skyblue", main = "Course graf", xlab = "Uroveň course", ylab = "Kumulativní frekvence")
 pie(abs, main = "Rozložení Course", col = rainbow(length(abs)))
 
+#-----------------------------------
+# Okruh 2
+
+# 1. Гистограмма
+hist(Math$PSATM, breaks = 20, col = "lightblue", main = "Histogram of Score")
+
+# 2. Q-Q график
+qqnorm(Math$PSATM, main = "Q-Q Plot of Score")
+qqline(Math$PSATM, col = "red")
+
+# 3. Тест Шапиро-Уилка на нормальность
+shapiro.test(Math$PSATM)
+
+# 4. Тест Колмогорова-Смирнова
+ks.test(Math$PSATM, "pnorm", mean = mean(Math$PSATM, na.rm = TRUE), sd = sd(Math$PSATM, na.rm = TRUE))
+
+
+# отсюда доп тест чтоб точно убедиться в нормальности данных
+library(moments)
+
+# Асимметрия (skewness)
+skewness(Math$PSATM)
+
+# Эксцесс (kurtosis)
+kurtosis(Math$PSATM)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

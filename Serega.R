@@ -49,13 +49,16 @@ skewness(Math$PSATM)
 kurtosis(Math$PSATM)
 
 
+quartiles <- quantile(Math$PSATM, probs = c(0.25, 0.75))
+IQR <- IQR(Math$PSATM)
+lower_limit <- quartiles[1]-1.5 * IQR
+upper_limit <- quartiles[2]+1.5 * IQR
+outliers <- Math$PSATM[Math$PSATM < lower_limit | Math$PSATM > upper_limit]
+(sort(outliers))
 
-
-
-
-
-
-
+hist(Math$PSATM[Math$PSATM < 77], col="skyblue", border = "darkblue",
+     main="Hist", xlab="Smth", freq=FALSE)
+lines(density(Math$PSATM[Math$PSATM < 77], col="red", lwd=2))
 
 
 
